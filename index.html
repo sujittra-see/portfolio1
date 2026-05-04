@@ -835,7 +835,32 @@
     .experience-list {
       display: flex;
       flex-direction: column;
+      gap: 48px;
+    }
+
+    .experience-subsection {
+      display: flex;
+      flex-direction: column;
       gap: 24px;
+    }
+
+    .experience-subsection-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .experience-subsection-title {
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .experience-subsection-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
     }
 
     .exp-card {
@@ -949,50 +974,6 @@
       max-height: 500px;
       object-fit: contain;
       background: var(--surface);
-    }
-
-    /* Experience Hidden Section */
-    .exp-hidden {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
-      opacity: 0;
-    }
-
-    .exp-hidden.expanded {
-      max-height: 3000px;
-      opacity: 1;
-    }
-
-    .exp-expand-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      padding: 20px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      color: var(--text);
-      font-size: 0.9375rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all var(--transition);
-      margin-top: 24px;
-    }
-
-    .exp-expand-btn:hover {
-      background: var(--surface);
-      border-color: var(--text);
-    }
-
-    .exp-expand-btn svg {
-      transition: transform 0.3s;
-    }
-
-    .exp-expand-btn.expanded svg {
-      transform: rotate(180deg);
     }
 
     /* Certificate Grid - 3-2 Layout with Centered Last Row */
@@ -2103,238 +2084,153 @@
       <div class="section-container">
         <div class="section-header" data-aos="fade-up">
           <p class="section-label">Experience</p>
-          <h2 class="section-title">Professional <em>Experience</em></h2>
-          <p class="section-desc">Hands-on roles in events, strategy, and digital projects.</p>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-desc">Hands-on roles across events, creative work, strategy, and academic projects.</p>
         </div>
 
         <div class="experience-list">
 
-          <!-- EXP 1: Restaurant Search Platform -->
-          <div class="exp-card exp-card--featured" data-aos="fade-up" style="margin-bottom:2rem;">
-            <div class="exp-card-inner exp-card-inner--stacked">
-              <div class="exp-info">
-                <div class="exp-header">
-                  <!-- <span class="skill-badge">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                      <line x1="8" y1="21" x2="16" y2="21" />
-                      <line x1="12" y1="17" x2="12" y2="21" />
-                    </svg> Digital Services
-                  </span> -->
-                  <span class="exp-date">May 2025 – Feb 2026</span>
-                </div>
-
-                <h3 class="exp-role">Restaurant Search Platform · KKU</h3>
-                <p class="exp-company">UX/UI Designer &amp; Prototype Developer</p>
-
-                <ul class="exp-achievements">
-                  <li>
-                    A prototype platform designed to help users conveniently search for and compare restaurants around
-                    Khon Kaen University by integrating information from multiple sources into a single platform.
-                  </li>
-                  <li>
-
-                    Aggregated restaurant info around KKU from Google Maps and Facebook
-                  </li>
-                  <li>
-
-                    Designed UX/UI to enhance overall user experience
-                  </li>
-                  <li>
-
-                    Built Figma prototype with full user flow &amp; interaction design
-                  </li>
-                </ul>
-              </div>
-
-              <div class="exp-figma-frame"
-                style="position:relative;width:390px;max-width:100%;margin:0 auto;aspect-ratio:360/644;background:var(--surface);border-radius:47px;overflow:hidden;border:8px solid #171717;box-shadow:0 10px 40px rgba(0,0,0,0.15);">
-                <iframe
-                  src="https://embed.figma.com/proto/QtVABLRb8PNhDsgOwU9VxJ/DS?node-id=207-404&p=f&scaling=scale-down&content-scaling=fixed&page-id=9%3A7&starting-point-node-id=207%3A404&embed-host=share&hide-ui=1&device=0"
-                  allowfullscreen loading="lazy" title="Restaurant Search Platform KKU — Figma Prototype"
-                  style="position:absolute;inset:0;width:100%;height:100%;border:none;z-index:2;border-radius:39px;background:transparent;transform:scale(1.10);transform-origin:center;"></iframe>
-              </div>
+          <div class="experience-subsection" data-aos="fade-up">
+            <div class="experience-subsection-header">
+              <h3 class="experience-subsection-title">Professional Experience</h3>
+              <span class="experience-subsection-line"></span>
             </div>
-          </div>
 
-          <!-- EXP 2: Graphic Design for Khon Kaen University Library -->
-          <div class="exp-card" data-aos="fade-up">
-            <div class="exp-card-inner" style="display: flex; flex-direction: column;">
-              <div class="exp-info" style="width: 100%; padding-bottom: 0;">
-                <div class="exp-header">
-                  <span class="skill-badge">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                      <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                      <path d="M2 2l7.586 7.586" />
-                      <circle cx="11" cy="11" r="2" />
-                    </svg> Graphic Design
-                  </span>
-                </div>
-                <h3 class="exp-role">Khon Kaen University Library</h3>
-                <!-- <p class="exp-company">Graphic Designer · Khon Kaen University Library</p> -->
-
-                <ul class="exp-achievements">
-                  <li>
-                    I designed graphic materials to promote the launch of an AI system called "Archi" for the Khon Kaen
-                    University Library, focusing on clear, modern communication and effective audience reach.
-                  </li>
-                  <li>
-                    Developed the visual concept and graphic style to align with the organization's identity and AI
-                    technology
-                  </li>
-                  <li>
-                    Created visual elements such as color schemes, typography, and layouts to ensure a distinctive and
-                    engaging design
-                  </li>
-                  <li>
-                    Produced promotional materials for digital platforms, including social media and the website
-                  </li>
-                </ul>
-              </div>
-
-              <div class="exp-media"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; background: transparent; padding: 28px; padding-top: 0; align-items: start;">
-                <div>
-                  <div
-                    style="border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
-                    <img src="images/4.jpg" alt="ARCHi" loading="lazy" style="width:100%; height:auto; display:block;">
-                  </div>
-                </div>
-                <div>
-                  <div
-                    style="border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
-                    <img src="images/2.jpg" alt="2" loading="lazy" style="width:100%; height:auto; display:block;">
-                  </div>
-                </div>
-                <div>
-                  <div
-                    style="border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
-                    <img src="images/3.jpg" alt="3" loading="lazy" style="width:100%; height:auto; display:block;">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- EXP 3: Showcase 8th 2026 -->
-          <div class="exp-card" data-aos="fade-up">
-            <div class="exp-card-inner">
-              <div class="exp-info">
-                <div class="exp-header">
-                  <span class="skill-badge">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M3 11l18-5v12L3 14v-3z" />
-                      <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
-                    </svg> Event
-                  </span>
-                  <span class="exp-date">Aug 2025 – Jan 2026</span>
-                </div>
-                <h3 class="exp-role">Showcase 8th 2026</h3>
-                <p class="exp-company">Media Production Officer</p>
-
-                <ul class="exp-achievements">
-                  <li>
-                    For the opening video of Showcase 8th, I was responsible for creating the storyboard, ensuring that
-                    the content aligned with the event's theme and concept to increase awareness and reach among the
-                    target audience.
-                  </li>
-                  <li>
-
-                    Wrote script and visual concept (hook → content → CTA) for opening video
-                  </li>
-                  <li>
-
-                    Created storyboard for the event opening video of Showcase 8th
-                  </li>
-                  <li>
-
-                    Ensured all visual content aligned with the core theme and concept
-                  </li>
-                  <li>
-
-                    Achieved <strong style="color: var(--accent);">3,678 views &amp; 95 likes</strong> on Instagram —
-                    organic reach with zero paid promotion
-                  </li>
-                </ul>
-              </div>
-
-              <div class="exp-media">
-                <div>
-                  <p class="text-xs mb-1.5 font-medium"
-                    style="color:var(--text-secondary);letter-spacing:0.05em;text-transform:uppercase;">Opening Video
-                  </p>
-                  <div
-                    style="position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid var(--border);background:#000;">
-                    <iframe
-                      src="https://player.cloudinary.com/embed/?cloud_name=dpasph0qe&public_id=%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%9B%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%97_rev.6_%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AA%E0%B8%B8%E0%B8%94_zi1h9w&fluid=true&controls=true&source_types%5B%5D=mp4"
-                      style="position:absolute;inset:0;width:100%;height:100%;border:none;"
-                      allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen
-                      title="Showcase 8th Opening Video"></iframe>
-                  </div>
-                </div>
-                <div>
-                  <p class="text-xs mb-1.5 font-medium"
-                    style="color:var(--text-secondary);letter-spacing:0.05em;text-transform:uppercase;">Poster 1</p>
-                  <div
-                    style="position:relative;aspect-ratio:3/4;border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
-                    <img src="images/showcase.jpg" alt="Showcase 8th Poster 1" loading="lazy"
-                      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hidden Experiences -->
-          <div class="exp-hidden" id="exp-hidden">
-
-            <!-- EXP 4: MobiLib Gen 4 -->
-            <div class="exp-card" data-aos="fade-up" style="margin-bottom:2rem;">
-              <div class="exp-card-inner" style="flex-direction:column;">
-                <div class="exp-info" style="width:100%;">
+            <!-- EXP 1: Graphic Design for Khon Kaen University Library -->
+            <div class="exp-card" data-aos="fade-up">
+              <div class="exp-card-inner" style="display: flex; flex-direction: column;">
+                <div class="exp-info" style="width: 100%; padding-bottom: 0;">
                   <div class="exp-header">
-                    <!-- <span class="skill-badge">
+                    <span class="skill-badge">
                       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2">
-                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                        <polyline points="17 6 23 6 23 12" />
-                      </svg> Event
-                    </span> -->
-                    <span class="exp-date">Oct 2024 – Sep 2025</span>
+                        <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                        <path d="M2 2l7.586 7.586" />
+                        <circle cx="11" cy="11" r="2" />
+                      </svg> Graphic Design
+                    </span>
                   </div>
-                  <h3 class="exp-role">MobiLib Gen 4</h3>
-                  <p class="exp-company">Digital Strategist · Simulated Enterprise</p>
+                  <h3 class="exp-role">Khon Kaen University Library</h3>
+                  <!-- <p class="exp-company">Graphic Designer · Khon Kaen University Library</p> -->
 
                   <ul class="exp-achievements">
                     <li>
-                      I was responsible for planning and executing marketing and promotional strategies to increase
-                      followers and reach.
+                      I designed graphic materials to promote the launch of an AI system called "Archi" for the Khon
+                      Kaen
+                      University Library, focusing on clear, modern communication and effective audience reach.
                     </li>
                     <li>
-
-                      Planned and executed sales and sales promotion activities for the graduation ceremony events
-                      (December 15–16 and 19, 2024), contributing to revenue generation, which accounted for
-                      approximately 75% from Photo Booth services and 25% from souvenir sales.
+                      Developed the visual concept and graphic style to align with the organization's identity and AI
+                      technology
                     </li>
                     <li>
-
-                      Analyzed customer needs to support sales planning.
+                      Created visual elements such as color schemes, typography, and layouts to ensure a distinctive and
+                      engaging design
                     </li>
                     <li>
-
-                      Defined pricing strategic and outlined approaches to increase followers on online platforms.
-                    </li>
-                    <li>
-
-                      Created marketing content to promote and drive customer engagement.
+                      Produced promotional materials for digital platforms, including social media and the website
                     </li>
                   </ul>
+                </div>
+
+                <div class="exp-media"
+                  style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; background: transparent; padding: 28px; padding-top: 0; align-items: start;">
+                  <div>
+                    <div
+                      style="border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
+                      <img src="images/4.jpg" alt="ARCHi" loading="lazy"
+                        style="width:100%; height:auto; display:block;">
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      style="border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
+                      <img src="images/2.jpg" alt="2" loading="lazy" style="width:100%; height:auto; display:block;">
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      style="border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
+                      <img src="images/3.jpg" alt="3" loading="lazy" style="width:100%; height:auto; display:block;">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- EXP 5: iTalk 7 2025 -->
+            <!-- EXP 2: Showcase 8th 2026 -->
+            <div class="exp-card" data-aos="fade-up">
+              <div class="exp-card-inner">
+                <div class="exp-info">
+                  <div class="exp-header">
+                    <span class="skill-badge">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M3 11l18-5v12L3 14v-3z" />
+                        <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+                      </svg> Event
+                    </span>
+                    <span class="exp-date">Aug 2025 – Jan 2026</span>
+                  </div>
+                  <h3 class="exp-role">Showcase 8th 2026</h3>
+                  <p class="exp-company">Media Production Officer</p>
+
+                  <ul class="exp-achievements">
+                    <li>
+                      For the opening video of Showcase 8th, I was responsible for creating the storyboard, ensuring
+                      that
+                      the content aligned with the event's theme and concept to increase awareness and reach among the
+                      target audience.
+                    </li>
+                    <li>
+
+                      Wrote script and visual concept (hook → content → CTA) for opening video
+                    </li>
+                    <li>
+
+                      Created storyboard for the event opening video of Showcase 8th
+                    </li>
+                    <li>
+
+                      Ensured all visual content aligned with the core theme and concept
+                    </li>
+                    <li>
+
+                      Achieved <strong style="color: var(--accent);">3,678 views &amp; 95 likes</strong> on Instagram —
+                      organic reach with zero paid promotion
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="exp-media">
+                  <div>
+                    <p class="text-xs mb-1.5 font-medium"
+                      style="color:var(--text-secondary);letter-spacing:0.05em;text-transform:uppercase;">Opening Video
+                    </p>
+                    <div
+                      style="position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid var(--border);background:#000;">
+                      <iframe
+                        src="https://player.cloudinary.com/embed/?cloud_name=dpasph0qe&public_id=%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%9B%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%82%E0%B8%A1%E0%B8%97_rev.6_%E0%B8%9B%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AA%E0%B8%B8%E0%B8%94_zi1h9w&fluid=true&controls=true&source_types%5B%5D=mp4"
+                        style="position:absolute;inset:0;width:100%;height:100%;border:none;"
+                        allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen
+                        title="Showcase 8th Opening Video"></iframe>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-xs mb-1.5 font-medium"
+                      style="color:var(--text-secondary);letter-spacing:0.05em;text-transform:uppercase;">Poster 1</p>
+                    <div
+                      style="position:relative;aspect-ratio:3/4;border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--surface);">
+                      <img src="images/showcase.jpg" alt="Showcase 8th Poster 1" loading="lazy"
+                        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- EXP 3: iTalk 7 2025 -->
             <div class="exp-card" data-aos="fade-up">
               <div class="exp-card-inner" style="display: flex; flex-direction: column;">
                 <div class="exp-info" style="width:100%;">
@@ -2388,15 +2284,106 @@
               </div>
             </div>
 
-          </div><!-- end exp-hidden -->
+            <!-- EXP 4: MobiLib Gen 4 -->
+            <div class="exp-card" data-aos="fade-up">
+              <div class="exp-card-inner" style="flex-direction:column;">
+                <div class="exp-info" style="width:100%;">
+                  <div class="exp-header">
+                    <!-- <span class="skill-badge">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                      <polyline points="17 6 23 6 23 12" />
+                    </svg> Event
+                  </span> -->
+                    <span class="exp-date">Oct 2024 – Sep 2025</span>
+                  </div>
+                  <h3 class="exp-role">MobiLib Gen 4</h3>
+                  <p class="exp-company">Digital Strategist · Simulated Enterprise</p>
 
-          <!-- Expand Button -->
-          <button class="exp-expand-btn" id="exp-expand-btn" onclick="toggleExperience()">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-            <span>View 2 More Experiences</span>
-          </button>
+                  <ul class="exp-achievements">
+                    <li>
+                      I was responsible for planning and executing marketing and promotional strategies to increase
+                      followers and reach.
+                    </li>
+                    <li>
+
+                      Planned and executed sales and sales promotion activities for the graduation ceremony events
+                      (December 15–16 and 19, 2024), contributing to revenue generation, which accounted for
+                      approximately 75% from Photo Booth services and 25% from souvenir sales.
+                    </li>
+                    <li>
+
+                      Analyzed customer needs to support sales planning.
+                    </li>
+                    <li>
+
+                      Defined pricing strategic and outlined approaches to increase followers on online platforms.
+                    </li>
+                    <li>
+
+                      Created marketing content to promote and drive customer engagement.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-subsection" data-aos="fade-up">
+            <div class="experience-subsection-header">
+              <h3 class="experience-subsection-title">Academic Project</h3>
+              <span class="experience-subsection-line"></span>
+            </div>
+
+            <!-- AP 1: Restaurant Search Platform -->
+            <div class="exp-card exp-card--featured" data-aos="fade-up">
+              <div class="exp-card-inner exp-card-inner--stacked">
+                <div class="exp-info">
+                  <div class="exp-header">
+                    <!-- <span class="skill-badge">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg> Digital Services
+                  </span> -->
+                    <span class="exp-date">May 2025 – Feb 2026</span>
+                  </div>
+
+                  <h3 class="exp-role">Restaurant Search Platform · KKU</h3>
+                  <p class="exp-company">UX/UI Designer &amp; Prototype Developer</p>
+
+                  <ul class="exp-achievements">
+                    <li>
+                      A prototype platform designed to help users conveniently search for and compare restaurants around
+                      Khon Kaen University by integrating information from multiple sources into a single platform.
+                    </li>
+                    <li>
+
+                      Aggregated restaurant info around KKU from Google Maps and Facebook
+                    </li>
+                    <li>
+
+                      Designed UX/UI to enhance overall user experience
+                    </li>
+                    <li>
+
+                      Built Figma prototype with full user flow &amp; interaction design
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="exp-figma-frame"
+                  style="position:relative;width:390px;max-width:100%;margin:0 auto;aspect-ratio:360/644;background:var(--surface);border-radius:47px;overflow:hidden;border:8px solid #171717;box-shadow:0 10px 40px rgba(0,0,0,0.15);">
+                  <iframe
+                    src="https://embed.figma.com/proto/QtVABLRb8PNhDsgOwU9VxJ/DS?node-id=207-404&p=f&scaling=scale-down&content-scaling=fixed&page-id=9%3A7&starting-point-node-id=207%3A404&embed-host=share&hide-ui=1&device=0"
+                    allowfullscreen loading="lazy" title="Restaurant Search Platform KKU — Figma Prototype"
+                    style="position:absolute;inset:0;width:100%;height:100%;border:none;z-index:2;border-radius:39px;background:transparent;transform:scale(1.10);transform-origin:center;"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div><!-- end space-y-8 -->
       </div><!-- end max-w-5xl -->
@@ -2415,7 +2402,7 @@
             <div class="cert-image" style="position: relative;">
               <img src="images/Cert1.png" alt="Become a UX/UI Designer Certificate"
                 onerror="this.parentElement.classList.add('img-placeholder')">
-              <span class="cert-badge">KKU</span>
+              <!-- <span class="cert-badge">KKU</span> -->
             </div>
             <div class="cert-content">
               <h4 class="cert-title">Become a UX/UI Designer</h4>
@@ -2425,7 +2412,7 @@
             <div class="cert-image" style="position: relative;">
               <img src="images/Cert2.png" alt="Data Analytics Certificate"
                 onerror="this.parentElement.classList.add('img-placeholder')">
-              <span class="cert-badge">KKU</span>
+              <!-- <span class="cert-badge">KKU</span> -->
             </div>
             <div class="cert-content">
               <h4 class="cert-title">เสริมทักษะ Data Analytics</h4>
@@ -2435,7 +2422,7 @@
             <div class="cert-image" style="position: relative;">
               <img src="images/Cert3.JPG" alt="Information and Knowledge Organization Certificate"
                 onerror="this.parentElement.classList.add('img-placeholder')">
-              <span class="cert-badge">KKU</span>
+              <!-- <span class="cert-badge">KKU</span> -->
             </div>
             <div class="cert-content">
               <h4 class="cert-title">Information and Knowledge Organization: IKO</h4>
@@ -2445,7 +2432,7 @@
             <div class="cert-image" style="position: relative;">
               <img src="images/Cert4.JPG" alt="Western Table Etiquette Certificate"
                 onerror="this.parentElement.classList.add('img-placeholder')">
-              <span class="cert-badge">KKU</span>
+              ÷
             </div>
             <div class="cert-content">
               <h4 class="cert-title">การอบรม Western Table Etiquette</h4>
@@ -2455,7 +2442,7 @@
             <div class="cert-image" style="position: relative;">
               <img src="images/Cert5.JPG" alt="MobiLib 4rd Generation 2025 Certificate"
                 onerror="this.parentElement.classList.add('img-placeholder')">
-              <span class="cert-badge">KKU</span>
+              <!-- <span class="cert-badge">KKU</span> -->
             </div>
             <div class="cert-content">
               <h4 class="cert-title">MobiLib 4rd Generation 2025</h4>
@@ -2822,23 +2809,6 @@
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
-
-    // Experience Expand/Collapse
-    function toggleExperience() {
-      const hiddenSection = document.getElementById('exp-hidden');
-      const btn = document.getElementById('exp-expand-btn');
-      const btnText = btn.querySelector('span');
-
-      if (hiddenSection.classList.contains('expanded')) {
-        hiddenSection.classList.remove('expanded');
-        btn.classList.remove('expanded');
-        btnText.textContent = 'View 2 More Experiences';
-      } else {
-        hiddenSection.classList.add('expanded');
-        btn.classList.add('expanded');
-        btnText.textContent = 'Show Less';
-      }
-    }
 
     // Enhanced Before/After Sliders
     (function initSliders() {
